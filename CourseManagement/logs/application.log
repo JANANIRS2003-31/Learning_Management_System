@@ -1,0 +1,37 @@
+2025-04-30T14:43:48.534+05:30  INFO 33476 --- [CourseManagement] [restartedMain] c.cts.lms.CourseManagementApplication    : Starting CourseManagementApplication using Java 21.0.6 with PID 33476 (C:\Users\2401125\Documents\project_workspace\CourseManagement\target\classes started by 2401125 in C:\Users\2401125\Documents\project_workspace\CourseManagement)
+2025-04-30T14:43:48.535+05:30  INFO 33476 --- [CourseManagement] [restartedMain] c.cts.lms.CourseManagementApplication    : No active profile set, falling back to 1 default profile: "default"
+2025-04-30T14:43:48.690+05:30  INFO 33476 --- [CourseManagement] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-04-30T14:43:48.706+05:30  INFO 33476 --- [CourseManagement] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 11 ms. Found 1 JPA repository interface.
+2025-04-30T14:43:48.787+05:30  INFO 33476 --- [CourseManagement] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 1111 (http)
+2025-04-30T14:43:48.789+05:30  INFO 33476 --- [CourseManagement] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-04-30T14:43:48.789+05:30  INFO 33476 --- [CourseManagement] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.40]
+2025-04-30T14:43:48.815+05:30  INFO 33476 --- [CourseManagement] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-04-30T14:43:48.815+05:30  INFO 33476 --- [CourseManagement] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 278 ms
+2025-04-30T14:43:48.852+05:30  INFO 33476 --- [CourseManagement] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-04-30T14:43:48.856+05:30  INFO 33476 --- [CourseManagement] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-04-30T14:43:48.866+05:30  INFO 33476 --- [CourseManagement] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-04-30T14:43:48.867+05:30  INFO 33476 --- [CourseManagement] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-27 - Starting...
+2025-04-30T14:43:48.880+05:30  INFO 33476 --- [CourseManagement] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-27 - Added connection com.mysql.cj.jdbc.ConnectionImpl@28e43df1
+2025-04-30T14:43:48.880+05:30  INFO 33476 --- [CourseManagement] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-27 - Start completed.
+2025-04-30T14:43:48.882+05:30  WARN 33476 --- [CourseManagement] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-04-30T14:43:48.882+05:30  INFO 33476 --- [CourseManagement] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-27)']
+	Database driver: undefined/unknown
+	Database version: 8.0.41
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-04-30T14:43:48.919+05:30  INFO 33476 --- [CourseManagement] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-04-30T14:43:48.932+05:30  INFO 33476 --- [CourseManagement] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-04-30T14:43:49.004+05:30  WARN 33476 --- [CourseManagement] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-04-30T14:43:49.186+05:30  INFO 33476 --- [CourseManagement] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-04-30T14:43:49.200+05:30  INFO 33476 --- [CourseManagement] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 1111 (http) with context path '/'
+2025-04-30T14:43:49.204+05:30  INFO 33476 --- [CourseManagement] [restartedMain] c.cts.lms.CourseManagementApplication    : Started CourseManagementApplication in 0.735 seconds (process running for 8778.132)
+2025-04-30T14:43:49.205+05:30  INFO 33476 --- [CourseManagement] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2025-04-30T14:45:08.652+05:30  INFO 33476 --- [CourseManagement] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2025-04-30T14:45:08.654+05:30  INFO 33476 --- [CourseManagement] [Thread-107] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-04-30T14:45:08.660+05:30  INFO 33476 --- [CourseManagement] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-04-30T14:45:08.662+05:30  INFO 33476 --- [CourseManagement] [Thread-107] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-04-30T14:45:08.663+05:30  INFO 33476 --- [CourseManagement] [Thread-107] com.zaxxer.hikari.HikariDataSource       : HikariPool-27 - Shutdown initiated...
+2025-04-30T14:45:08.667+05:30  INFO 33476 --- [CourseManagement] [Thread-107] com.zaxxer.hikari.HikariDataSource       : HikariPool-27 - Shutdown completed.
