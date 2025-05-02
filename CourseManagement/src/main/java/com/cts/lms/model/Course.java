@@ -1,8 +1,8 @@
 package com.cts.lms.model;
 
-import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 import jakarta.validation.constraints.NotBlank;
@@ -11,16 +11,14 @@ import jakarta.validation.constraints.NotNull;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import lombok.RequiredArgsConstructor;
 
 @Data
 @Entity
 @Table(name = "course_info")
-@AllArgsConstructor
-@NoArgsConstructor
+@RequiredArgsConstructor
 public class Course {
 	@Id
-	@GeneratedValue
-	@Column(name="cid")
 	private int courseId;
 	@NotBlank(message="Course Title should not be null or blank")
 	@NotNull
@@ -42,5 +40,16 @@ public class Course {
 	@NotNull
 	@NotEmpty
 	private String prerequisites;
+	public Course(int courseId, String title, String description, String syllabus, int instructorId, String prerequisites) {
+		super();
+		this.courseId=courseId;
+		this.title = title;
+		this.description = description;
+		this.syllabus = syllabus;
+		this.instructorId = instructorId;
+		this.prerequisites = prerequisites;
+	}
+	
+	
 
 }
