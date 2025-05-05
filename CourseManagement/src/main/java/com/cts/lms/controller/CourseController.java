@@ -44,9 +44,9 @@ public class CourseController {
 		return service.getAllCourses();
 	}
 
-	@DeleteMapping("/delete/{did}")
-	public String deleteCourse(@PathVariable("did") int courseId) {
-		return service.deleteCourse(courseId);
+	@DeleteMapping("/delete/{uid}")
+	public String deleteCourse(@PathVariable("uid") int userId) {
+		return service.deleteCourse(userId);
 	}
 
 }
