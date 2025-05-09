@@ -12,7 +12,7 @@ import com.cts.lms.repository.CourseRepository;
 
 @Service
 public class CourseServiceImpl implements CourseService {
-	
+
 	@Autowired
 	CourseRepository repository;
 

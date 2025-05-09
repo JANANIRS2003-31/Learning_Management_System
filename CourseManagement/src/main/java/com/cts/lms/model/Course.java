@@ -18,20 +18,20 @@ import lombok.RequiredArgsConstructor;
 public class Course {
 	@Id
 	private int courseId;
-	@NotBlank(message="Course Title should not be null or blank")
+	@NotBlank(message = "Course Title should not be null or blank")
 	@NotNull
 	@NotEmpty
 	private String title;
-	@NotBlank(message="Course Description cannot be Empty")
+	@NotBlank(message = "Course Description cannot be Empty")
 	@NotNull
 	@NotEmpty
 	private String description;
-	@NotBlank(message="Course syllabus cannot be Empty")
+	@NotBlank(message = "Course syllabus cannot be Empty")
 	@NotNull
 	@NotEmpty
 	private String syllabus;
 	private int instructorId;
-	@NotBlank(message="Prerequisites should be filled, it cannot be empty")
+	@NotBlank(message = "Prerequisites should be filled, it cannot be empty")
 	@NotNull
 	private String prerequisites;
 }

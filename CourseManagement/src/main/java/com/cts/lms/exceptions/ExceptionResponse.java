@@ -10,6 +10,7 @@ public class ExceptionResponse {
 	public ExceptionResponse() {
 		super();
 	}
+
 	public ExceptionResponse(int status, String message, LocalDateTime time) {
 		super();
 		this.status = status;
