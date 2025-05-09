@@ -33,6 +33,5 @@ public class Course {
 	private int instructorId;
 	@NotBlank(message="Prerequisites should be filled, it cannot be empty")
 	@NotNull
-	@NotEmpty
 	private String prerequisites;
 }

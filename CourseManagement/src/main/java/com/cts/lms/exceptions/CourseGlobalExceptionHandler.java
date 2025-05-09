@@ -17,7 +17,6 @@ import org.springframework.web.context.request.WebRequest;
 public class CourseGlobalExceptionHandler {
 	@ExceptionHandler(value = MethodArgumentNotValidException.class)
 	public ResponseEntity<Object> handleMethodArgumentNotValid(MethodArgumentNotValidException ex) {
-
 		Map<String, Object> body = new HashMap<>();
 		body.put("timestamp", new Date());
 		// Get all errors
