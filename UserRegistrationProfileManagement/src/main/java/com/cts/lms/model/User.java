@@ -1,6 +1,4 @@
 package com.cts.lms.model;
-
-//import com.cts.lms.model.UserRole;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.EnumType;
@@ -32,10 +30,8 @@ public class User {
 	private String password;
 	@Enumerated(EnumType.STRING)
 	private UserRole role;
-	
+
 	public User(int userId, String name, String email, String password, String string) {
 	}
-	
-	
 
 }

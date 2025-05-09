@@ -50,6 +50,5 @@ public class CourseGlobalExceptionHandler {
 		exceptionResponse.setMessage(exception.getMessage());
 
 		return new ResponseEntity<ExceptionResponse>(exceptionResponse, HttpStatus.NOT_ACCEPTABLE);
-
 	}
 }

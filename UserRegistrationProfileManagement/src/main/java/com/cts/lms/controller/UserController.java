@@ -26,8 +26,9 @@ public class UserController {
 
 	@PostMapping("/create")
 	public String saveUser(@RequestBody @Validated User user) {
-			return service.saveUser(user);
+		return service.saveUser(user);
 	}
+
 	@PutMapping("/update")
 	public User updateUser(@RequestBody @Validated User user) {
 		return service.updateUser(user);
@@ -42,12 +43,12 @@ public class UserController {
 	public User getById(@PathVariable("uid") int userId) throws UserNotFound {
 		return service.getUserById(userId);
 	}
-	
+
 	@GetMapping("/checkUserExist/{uid}")
 	public Boolean checkUserExist(@PathVariable("uid") int userId) throws UserNotFound {
 		return service.checkUserExist(userId);
 	}
-	
+
 	@GetMapping("/getall")
 	public List<User> getAllUser() {
 		return service.getAllUser();

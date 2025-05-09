@@ -1,7 +1,6 @@
 package com.cts.lms.service;
 
 import java.util.List;
-
 import com.cts.lms.exceptions.UserNotFound;
 import com.cts.lms.model.User;
 

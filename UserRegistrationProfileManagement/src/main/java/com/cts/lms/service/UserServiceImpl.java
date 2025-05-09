@@ -1,4 +1,5 @@
 package com.cts.lms.service;
+
 import java.util.List;
 import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,7 +21,7 @@ public class UserServiceImpl implements UserService {
 
 	@Override
 	public User updateUser(User user) {
-		return repository.save(user);	
+		return repository.save(user);
 	}
 
 	@Override
@@ -38,20 +39,19 @@ public class UserServiceImpl implements UserService {
 	}
 
 	@Override
-	public String deleteUser(int userId) throws UserNotFound{
+	public String deleteUser(int userId) throws UserNotFound {
 		Optional<User> optional = repository.findById(userId);
 		if (optional.isPresent()) {
 			repository.deleteById(userId);
 			return "User Details deleted Successfully!!!";
-		}
-		else {
+		} else {
 			throw new UserNotFound("Invalid Course ID!!!");
 		}
 	}
-	
+
 	@Override
 	public User getUserById(int userId) throws UserNotFound {
-		
+
 		Optional<User> optional = repository.findById(userId);
 		if (optional.isPresent())
 			return optional.get();
@@ -68,5 +68,5 @@ public class UserServiceImpl implements UserService {
 		else
 			throw new UserNotFound("User Id is Invalid...");
 	}
-	
+
 }
