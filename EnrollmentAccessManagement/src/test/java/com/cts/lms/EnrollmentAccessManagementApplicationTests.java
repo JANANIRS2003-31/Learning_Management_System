@@ -21,7 +21,6 @@ import com.cts.lms.service.EnrollmentServiceImpl;
 
 @SpringBootTest
 class EnrollmentServiceTests {
-    
     @Mock
     EnrollmentRepository repository;
 
