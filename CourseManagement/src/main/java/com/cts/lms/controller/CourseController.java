@@ -34,7 +34,7 @@ public class CourseController {
 		return service.updataCourse(course);
 	}
 
-	@GetMapping("/getbyId/{did}")
+	@GetMapping("/fetchById/{did}")
 	public Course getCourse(@PathVariable("did") int courseId) throws CourseNotFound {
 		return service.getCourse(courseId);
 	}
@@ -45,8 +45,12 @@ public class CourseController {
 	}
 
 	@DeleteMapping("/delete/{uid}")
-	public String deleteCourse(@PathVariable("uid") int userId) {
+	public String deleteCourse(@PathVariable("uid") int userId) throws CourseNotFound {
 		return service.deleteCourse(userId);
 	}
 
+	@GetMapping("/checkCourseExist/{cid}")
+	public Boolean checkCourseExist(@PathVariable("cid") int courseId) throws CourseNotFound {
+		return service.checkCourseExist(courseId);
+	}
 }

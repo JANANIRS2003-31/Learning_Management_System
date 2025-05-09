@@ -6,6 +6,7 @@ import jakarta.persistence.Table;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotEmpty;
 import jakarta.validation.constraints.NotNull;
+import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.RequiredArgsConstructor;
 
@@ -13,6 +14,7 @@ import lombok.RequiredArgsConstructor;
 @Entity
 @Table(name = "course_info")
 @RequiredArgsConstructor
+@AllArgsConstructor
 public class Course {
 	@Id
 	private int courseId;
@@ -28,24 +30,9 @@ public class Course {
 	@NotNull
 	@NotEmpty
 	private String syllabus;
-//	@NotBlank(message="Instructor ID should be filled, it cannot be empty")
-//	@NotNull
-//	@NotEmpty
 	private int instructorId;
 	@NotBlank(message="Prerequisites should be filled, it cannot be empty")
 	@NotNull
 	@NotEmpty
 	private String prerequisites;
-	public Course(int courseId, String title, String description, String syllabus, int instructorId, String prerequisites) {
-		super();
-		this.courseId=courseId;
-		this.title = title;
-		this.description = description;
-		this.syllabus = syllabus;
-		this.instructorId = instructorId;
-		this.prerequisites = prerequisites;
-	}
-	
-	
-
 }

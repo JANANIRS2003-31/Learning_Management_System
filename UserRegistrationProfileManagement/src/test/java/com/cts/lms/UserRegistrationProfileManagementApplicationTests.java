@@ -46,14 +46,16 @@ class UserManagementApplicationTests {
     }
 
     @Test
-    void deleteUserTest() {
-        int userId = 1;
-        Mockito.doNothing().when(repository).deleteById(userId);
-        
+    void deleteUserTest() throws UserNotFound {
+        int userId = 2;
+        User user = new User(userId, "Jane Smith", "jane.smith@example.com", "strongPass456", "INSTRUCTOR");
+
+        Mockito.when(repository.findById(userId)).thenReturn(Optional.of(user)); // ✅ Mock findById
+        Mockito.doNothing().when(repository).deleteById(userId); // ✅ Mock delete
+
         String response = service.deleteUser(userId);
         assertEquals("User Details deleted Successfully!!!", response);
     }
-
     @Test
     void getUserByEmailTest() throws UserNotFound {
         String email = "john.doe@example.com";

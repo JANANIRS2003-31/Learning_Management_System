@@ -38,13 +38,23 @@ public class UserController {
 		return service.getUserByEmail(email);
 	}
 
+	@GetMapping("/fetchById/{uid}")
+	public User getById(@PathVariable("uid") int userId) throws UserNotFound {
+		return service.getUserById(userId);
+	}
+	
+	@GetMapping("/checkUserExist/{uid}")
+	public Boolean checkUserExist(@PathVariable("uid") int userId) throws UserNotFound {
+		return service.checkUserExist(userId);
+	}
+	
 	@GetMapping("/getall")
 	public List<User> getAllUser() {
 		return service.getAllUser();
 	}
 
 	@DeleteMapping("/delete/{did}")
-	public String deleteUser(@PathVariable("did") int userId) {
+	public String deleteUser(@PathVariable("did") int userId) throws UserNotFound {
 		return service.deleteUser(userId);
 	}
 

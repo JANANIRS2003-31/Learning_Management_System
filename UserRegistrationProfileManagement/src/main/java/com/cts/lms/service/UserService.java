@@ -14,7 +14,11 @@ public interface UserService {
 	public abstract User getUserByEmail(String email) throws UserNotFound;
 
 	public abstract List<User> getAllUser();
- 
-	public abstract String deleteUser(int userId);
+
+	public abstract String deleteUser(int userId) throws UserNotFound;
+
+	public abstract User getUserById(int userId) throws UserNotFound;
+
+	public abstract Boolean checkUserExist(int userId) throws UserNotFound;
 
 }

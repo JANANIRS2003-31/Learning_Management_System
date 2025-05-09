@@ -14,7 +14,9 @@ public interface CourseService {
 	public abstract Course getCourse(int courseId) throws CourseNotFound;
 
 	public abstract List<Course> getAllCourses();
- 
-	public abstract String deleteCourse(int courseId);
+
+	public abstract String deleteCourse(int courseId) throws CourseNotFound ;
+
+	public abstract Boolean checkCourseExist(int courseId) throws CourseNotFound;
 
 }

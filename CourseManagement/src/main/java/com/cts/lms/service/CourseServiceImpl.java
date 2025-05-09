@@ -17,8 +17,11 @@ public class CourseServiceImpl implements CourseService {
 
 	@Override
 	public String saveCourse(Course course) {
-		repository.save(course);
-		return "The course is created successfully!!!";
+		Course sub = repository.save(course);
+		if (sub != null)
+			return "The course is created successfully!!!";
+		else
+			return "Course Not Saved";
 	}
 
 	@Override
@@ -41,9 +44,24 @@ public class CourseServiceImpl implements CourseService {
 	}
 
 	@Override
-	public String deleteCourse(int courseId) {
-		repository.deleteById(courseId);
-		return "Course deleted Successfully!!!";
+	public String deleteCourse(int courseId) throws CourseNotFound {
+		Optional<Course> optional = repository.findById(courseId);
+		if (optional.isPresent()) {
+			repository.deleteById(courseId);
+			return "Course deleted Successfully!!!";
+		} else {
+			throw new CourseNotFound("Invalid Course ID!!!");
+		}
+	}
+
+	@Override
+	public Boolean checkCourseExist(int courseId) throws CourseNotFound {
+		Boolean response = repository.existsById(courseId);
+		if (response) {
+			return response;
+		} else {
+			throw new CourseNotFound("Course Id is Invalid....");
+		}
 	}
 
 }
