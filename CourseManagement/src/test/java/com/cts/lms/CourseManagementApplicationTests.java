@@ -22,7 +22,6 @@ class CourseManagementApplicationTests {
 
 	@Mock
 	CourseRepository repository;
-
 	@InjectMocks
 	CourseServiceImpl service;
 
